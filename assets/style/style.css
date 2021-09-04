@@ -1,1 +1,21 @@
 /* BASIC STYLES HERE */
+.bg-Blue{
+  border-color: blue;
+}
+.bg-Red{
+  border-color: red;
+}
+.bg-Yellow{
+  border-color: yellow;
+}
+.bg-Green{
+  border-color: green;
+}
+.bg-Turquoise{
+  border-color: turquoise;
+}
+.card-body{
+  max-height: 15rem;
+  min-height: 15rem;
+  overflow-y: auto;
+}

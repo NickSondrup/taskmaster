@@ -1,23 +1,19 @@
 import { ProxyState } from "../AppState.js";
-import { taskService } from "../Services/TasksService.js";
+import { tasksService } from "../Services/TasksService.js";
 
 
 
-function _drawTasks(){
-  let template = ''
-  ProxyState.tasks.forEach(t => template += t.TaskTemplate)
-  document.getElementById('taskRow').innerHTML=template
-}
+// function _drawTasks(){
+//   let template = ''
+//   ProxyState.tasks.forEach(t => template += t.TaskTemplate)
+//   document.getElementById('taskRow').innerHTML=template
+// }
 
 export class TasksController{
   constructor(){
     console.log('hello from taskscontroller');
-    ProxyState.on('tasks', _drawTasks)
   }
-  
-
-
-  createTask(){
+  createTask(listId){
     event.preventDefault()
     /**
      * @type {HTMLFormElement}
@@ -25,9 +21,16 @@ export class TasksController{
     // @ts-ignore
     let form = event.target
     let taskData = {
-      taskInfo: form.taskName.value
+      taskInfo: form.taskName.value,
+      listId: listId
     }
-    taskService.createTask(taskData)
+    tasksService.createTask(taskData)
     form.reset()
   }
+
+  deleteTask(taskId){
+    tasksService.deleteTask(taskId)
+
+  }
+
 }

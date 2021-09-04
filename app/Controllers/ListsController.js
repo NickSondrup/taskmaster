@@ -15,6 +15,8 @@ export class ListsController{
   constructor(){
     console.log("hello form listsController")
     ProxyState.on('lists', _drawLists)
+    ProxyState.on('tasks', _drawLists)
+    _drawLists()
   }
 
   createList(){
@@ -32,4 +34,7 @@ export class ListsController{
     form.reset()
   }
 
+  deleteList(listId){
+    listsService.deleteList(listId)
+  }
 }
