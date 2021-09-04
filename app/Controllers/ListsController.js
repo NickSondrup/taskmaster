@@ -35,6 +35,9 @@ export class ListsController{
   }
 
   deleteList(listId){
+    let result = window.confirm('Do you want to delete this?')
+    if(result == true){
     listsService.deleteList(listId)
+    }
   }
 }

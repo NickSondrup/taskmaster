@@ -23,6 +23,14 @@ class ListsService{
     ProxyState.tasks = ProxyState.tasks.filter(t => t.listId !== listId)
   }
 
+  // countTasks(listId){
+  //   let count = 0
+  //   let foundTasks = ProxyState.tasks.filter(t => t.listId == listId)
+
+  //   count = foundTasks.length 
+
+  // }
+
 }
 
 

@@ -12,7 +12,7 @@ export class List{
     <div class="col-md-3 my-1">
     <div class="card bg-${this.color} border-3">
       <div class="card-header">
-        <h6>${this.name}</h6>
+        <h6>${this.name}, ${this.TasksCount}</h6>
         <i class="mdi mdi-close-thick selectable" onclick="app.listsController.deleteList('${this.id}')"></i>
       </div>
       <div class="card-body">
@@ -27,7 +27,7 @@ export class List{
         <form onsubmit="app.tasksController.createTask('${this.id}')">
           <div class="form-group d-flex">
             <label for="taskName">Task:</label>
-            <input type="text" class="form-control" name="taskName" required minlength="3" maxlength="20">
+            <input type="text" class="form-control" name="taskName" required minlength="3" maxlength="50">
           </div>
         </form>
       </div>
@@ -44,4 +44,13 @@ export class List{
     return template
   }
 
+  get TasksCount(){
+    let totalCount = 0
+    let checkedCount = 0
+   let foundTasks = ProxyState.tasks.filter(t => t.listId == this.id)
+   let checkedTasks = foundTasks.filter(f => f.checked === 'checked')
+    checkedCount = checkedTasks.length
+   totalCount = foundTasks.length 
+   return (checkedCount + '/' + totalCount)
+  }
 }

@@ -19,3 +19,7 @@
   min-height: 15rem;
   overflow-y: auto;
 }
+
+.checked{
+  text-decoration: line-through;
+}

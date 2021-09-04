@@ -10,4 +10,5 @@ class App {
 
 loadState()
 
+
 window["app"] = new App();
