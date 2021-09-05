@@ -14,7 +14,7 @@ export class TasksController{
   constructor(){
     console.log('hello from taskscontroller');
   }
-  createTask(listId){
+  createTask(listId, listColor){
     event.preventDefault()
     /**
      * @type {HTMLFormElement}
@@ -24,6 +24,7 @@ export class TasksController{
     let taskData = {
       taskInfo: form.taskName.value,
       listId: listId,
+      listColor: listColor,
       
     }
     tasksService.createTask(taskData)

@@ -1,23 +1,43 @@
 /* BASIC STYLES HERE */
+.title{
+  font-size: 100px;
+}
+::placeholder{
+  color: black !important;
+  font-size: 20px;
+}
 .bg-Blue{
   border-color: blue;
+  background-color: blue;
+  color: blue;
 }
 .bg-Red{
   border-color: red;
+  background-color: red;
+  color: red;
 }
 .bg-Yellow{
   border-color: yellow;
+  background-color: yellow;
+  color: yellow;
 }
 .bg-Green{
   border-color: green;
+  background-color: green;
+  color: green;
 }
 .bg-Turquoise{
   border-color: turquoise;
+  background-color: turquoise;
+  color: turquoise;
 }
 .card-body{
   max-height: 15rem;
   min-height: 15rem;
   overflow-y: auto;
+}
+.font-custom{
+  font-family: 'VT323', monospace;
 }
 
 .checked{

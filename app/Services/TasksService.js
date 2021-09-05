@@ -18,7 +18,6 @@ class TasksService{
    ProxyState.tasks = ProxyState.tasks.filter(t => t.taskId !== taskId)
  }
  setChecked(taskId){
-  debugger
   let foundTask = ProxyState.tasks.find(t => t.taskId === taskId)
   if(foundTask.checked == 'unchecked'){
     foundTask.checked = 'checked'
@@ -41,7 +40,6 @@ class TasksService{
       icon: 'success',
       title: 'This may help your survival!',
       background: 'black',
-      titleColor: 'green',
       customClass: {
         title: 'text-success'
       }

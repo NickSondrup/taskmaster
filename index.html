@@ -12,44 +12,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>taskmaster</title>
 </head>
 
-<body>
+<body class="font-custom">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3 d-flex" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <h1 class="ms-2">taskmaster</h1>
-      </a>
+    <nav class="navbar navbar-dark navbar-expand bg-black text-light no-select p-0">
+      
+        <h1 class="ms-5 title bg-Green bg-black">Taskmaster</h1>
+      
     </nav>
   </header>
 
-  <main class="container-fluid bg-dark">
+  <main class="container-fluid bg-black">
     <div class="row">
-      <div class="col-6">
-        <form class="d-flex" onsubmit="app.listsController.createList()">
+      <div class="col-lg-6 col-12">
+        <form class="d-flex mb-5" onsubmit="app.listsController.createList()">
           <div class="form-group d-flex">
             <label for="listName" class="visually-hidden">list Name:</label>
-            <input type="text" class="form-control m-1" name="listName" required minlength="3" maxlength="15">
+            <input type="text" class="form-control m-1 bg-Green" name="listName" placeholder="Input List Name" required minlength="3" maxlength="15">
           </div>
           <div class="form-group d-flex">
             <label for="listColor" class="visually-hidden">Color:</label>
-            <select name="listColor" id="listColor" required class="form-control m-1">
-              <option disabled selected value="">Please Choose a Color</option>
-              <option>Blue</option>
-              <option>Green</option>
-              <option>Red</option>
-              <option>Yellow</option>
-              <option>Turquoise</option>
+            <select name="listColor" id="listColor" required class="form-control m-1 bg-Green text-black">
+              <option disabled selected class="fs-3" value="">Pick a Color</option>
+              <option class="fs-3">Blue</option>
+              <option class="fs-3">Green</option>
+              <option class="fs-3">Red</option>
+              <option class="fs-3">Yellow</option>
+              <option class="fs-3">Turquoise</option>
             </select>
           </div>
           <div class="button-group m-1">
-            <button type="reset" class="btn btn-secondary">Clear</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn bg-Red text-black fs-3 p-1 py-0">Clear</button>
+            <button type="submit" class="btn bg-Green text-black btn-primary fs-3 p-1 py-0">Submit</button>
           </div>
         </form>
       </div>
